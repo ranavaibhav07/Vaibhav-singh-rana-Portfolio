@@ -38,7 +38,7 @@
     padding: auto;
     
 }
-#project0{
+#project0, #project1{
     display: flex;
     gap: 150px;
     flex-direction: row;
@@ -58,7 +58,14 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
-
+}
+#project_image1{
+    height: 100%;
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }
 #project_description{
     display: flex;
@@ -78,6 +85,7 @@
     color: white;
     font-family: 'Nunito', sans-serif;
     margin-bottom: 15px;
+    margin-bottom: 100px;
 }
 #tags{
     display: flex;
@@ -94,3 +102,27 @@
     color: white;
     font-family: 'Nunito', sans-serif;
    }
+   #contact_img{
+    height: 100%;
+    width: 50%;
+   }
+   #contact_title{
+    margin-bottom: 20px;
+    border-bottom: #fc815c solid 1px;
+   }
+   #contact_info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+
+   #contact_title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+#contact_info{
+    margin: 40px;
+    
+}

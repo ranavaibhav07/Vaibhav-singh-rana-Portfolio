@@ -75,9 +75,9 @@
                 </div>
 
             </div>
-            <div id="project0" >
+            <div id="project1" >
                 <a id="project_image_link" href="http://127.0.0.1:5501/CSS_PROJECT/project.html">
-                    <img id="project_image" class="hover:scale-110 ease-in-out duration-300" src="imagesss/E-pathshala.png" alt="">
+                    <img id="project_image1" class="hover:scale-110 ease-in-out duration-300" src="imagesss/E-pathshala.png" alt="">
                 </a>
             <div id="project_description" >
                 <h2 id="project_title" >E-Pathshala</h2>
@@ -90,9 +90,68 @@
                 </ul>
             </div>
 
+        </div>     
+    </div>
+    <h1 id="contact_title" class=" text-white mt-10 font-bold text-3xl  flex justify-center">Contact Us</h1>
+    <div id="contact_section" class="flex">
+        <div id="contact_img" class="">
+            <img src="assets/images/contact-me.svg" alt="">
         </div>
-            
-            
+        <form name="Contact_us" netlify>
+        <div id="contact_info" class="flex flex-col">
+            <div><label for="name" id="label1" class=" flex gap-1 text-white"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-user"
+            >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg><p class="text-xl font-semibold top-0 ">Name</p></label>
+            <textarea class="text-black" type="text" name="Name" id="name" rows="1" cols="80" required></textarea></div>
+            <div><label for="email" id="label2" class=" flex  text-white">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="28"
+                viewBox="0 0 24 22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-at-sign"
+            >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+            </svg><p class="text-xl font-semibold  ">Email</p></label>
+            <textarea class="text-black " type="email" name="Email" id="email" rows="1" cols="80" required></textarea></div>
+            <div><label for="message" id="label3" class=" flex gap-2 text-white">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="28"
+                viewBox="0 0 24 22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-message-square"
+            >
+                <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+            </svg><p class="text-xl font-semibold ">Message</p></label>
+            <textarea class="text-black" name="Message" id="message" rows="4" cols="80" required></textarea></div>
+            <button class="text-white text-xl font-semibold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] rounded-xl px-5 py-2 hover:scale-110 ease-in-out duration-300">Send Message</button>
+        </div></form>
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
