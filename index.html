@@ -6,9 +6,11 @@
     <title>Vaibhav's Portfolio</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="input.css">
+    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>
     <script src="./matter.js" defer></script>
     <link rel="icon" type="" href="imagesss/logo_copy-removebg-preview .png">
-    
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="bg-[#111111]">
     <section>
@@ -26,21 +28,29 @@
         <img id="bg_logo" class="h-[28vh] w-[24vw] top-1/4 left-1/3 absolute opacity-10 md:w-[28vw] md:h-auto md:opacity-20 md:left1/2" src="imagesss/logo_copy-removebg-preview .png" alt="bg_logo">
         <div id="hero_section" class="ml-10 mt-32 md:ml-44 flex flex-row justify-between relative">
             <div id="hero_body" class="flex flex-col gap-3">
+                <h3 class="text-white text-xl font-semibold ">Hello, It's Me</h3>
                 <h1 id="hero_title" class="text-[7vh] font-bold text-white ">Vaibhav Singh Rana</h1>
-                <h6 id="hero_subtitle" class="text-white text-xl font-semibold   "> Frontend Developer</h6>
-                <div class="mt-14 "><a href="about_section"><button id="about_me" class="text-white text-xl font-semibold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] rounded-xl px-5 py-2 hover:scale-110 ease-in-out duration-300">About Me</button></a></div>
-            
+                <h6 id="hero_subtitle" class="text-white text-xl font-semibold"> And I'm a <span class="multiple-text"></span></h6>
+                
+            <div class="popup_about" id="about_section">
+                <div class="overlay"></div>
+                <div class="content">
+                     <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quis voluptate vero dolores enim ad assumenda dolorum deleniti quisquam. Illo cupiditate mollitia facere laudantium quasi excepturi et, neque laborum consectetur ullam alias tempora, odit officiis architecto optio at, quisquam vel delectus expedita quibusdam sunt nam! Animi ut laudantium dicta assumenda.</p>   
+                </div>
+            </div>
+            <div class="mt-14 "><button onclick="togglePopup()" id="about_me" class="text-white text-xl font-semibold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] rounded-xl px-5 py-2 hover:scale-110 ease-in-out duration-300">About Me</button></div>
             </div>
             <div id="contact_icon" class="flex flex-col gap-8 text-white mr-10">
                 <a href=""><img class="h-9 hover:scale-110  ease-in-out duration-300  " src="assets/icons/twitter.svg" alt="twitter_icon"></a>
                 <a href=""><img class="h-9 hover:scale-110 ease-in-out duration-300   " src="assets/icons/instagram.svg" alt="instagram_icon"></a>
                 <a href="https://www.linkedin.com/in/vaibhav-singh-rana-6a2920230/"><img class="h-9 hover:scale-110 ease-in-out duration-300  " src="assets/icons/linkedin.svg" alt="linkedin_icon"></a>
-                <a href="#"><img class="h-9 hover:scale-110 ease-in-out duration-300 " src="assets/icons/github.svg" alt="github_icon"></a>
+                <a href="https://github.com/ranavaibhav07"><img class="h-9 hover:scale-110 ease-in-out duration-300 " src="assets/icons/github.svg" alt="github_icon"></a>
                 <a href="mailto:ranavaibhav2004@gmail.com"><img class="h-9 hover:scale-110 ease-in-out duration-300 " src="assets/icons/email.svg" alt="email_icon"></a>
             </div>  
         </div> 
     <div id="latest_section" class="mt-16 flex flex-col  justify-center relative"> 
-        <div class="flex justify-center"><a href="project_section">
+        <div class="flex justify-center"><a href="#project_section">
             <button class="text-white  text-xl font-semibold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] rounded-xl px-5 py-2 hover:scale-110 ease-in-out duration-200">Latest Works</button></a></div>
             <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script><lottie-player class="absolute left-1/2 -translate-x-1/2 mt-28" src="https://lottie.host/fd55e317-bc41-4729-ac93-acbbf44e5c5d/LBSeeKQjBn.json" background="##000000" speed="1" style="width: 30px; height: 300px" loop autoplay></lottie-player>
     </div></header>
@@ -53,7 +63,7 @@
                     </a>
                 <div id="project_description" >
                     <h2 id="project_title" >Ochi Clone</h2>
-                    <p id="project_body" class="mt-4 ">This is a clone of Ochi. Where I created a clone of Ochi Website which is one of the awarded website. </p>
+                    <p id="project_body" class="mt-4 ">Ochi Clone is a modern and sleek web application inspired <br>by the original Ochi platform. Built using React, TailwindCSS,<br> GSAP, and Vite, this project showcases advanced front-end <br> development skills combined with smooth animations and a <br> responsive design. The clone replicates key features of the <br> original platform, offering users a seamless and visually  <br> captivating experience. It serves as a testament to my growing <br> expertise in crafting dynamic and efficient web applications while <br> pushing creative boundaries in web development.</p>
                     <ul id="tags" >
                         <li id="tag1" class="border bg-gray-800 rounded-xl px-3 py-1">#reactjs</li>
                         <li id="tag2" class="border bg-gray-800 rounded-xl px-3 py-1">#node.js</li>
@@ -62,15 +72,36 @@
                         <li id="tag5" class="border bg-gray-800 rounded-xl px-3 py-1">#tailwind CSS</li>
                     </ul>
                 </div>
-
             </div>
+
             <div id="project1" >
+                <a id="project_image_link" href="https://divinedining.netlify.app/">
+                    <img id="project_image1" class="hover:scale-110 ease-in-out duration-300" src="imagesss/divinedining.png" alt="">
+                </a>
+            <div id="project_description" >
+                <h2 id="project_title" >Divine Dining</h2>
+                <p id="project_body" class="mt-4 object-cover">Welcome to <b>Divine Dining</b>, where culinary artistry meets digital elegance. <br> 
+                This website is crafted to offer a delightful glimpse into the world of exceptional <br> dining  
+                experiences. From showcasing delectable dishes to highlighting creative <br> menu ideas, Divine Dining 
+                is designed with a user-friendly interface and visually <br>appealing design to satisfy both your taste 
+                buds and aesthetic senses. <br> Explore, indulge, and be inspired by a platform that brings the joy of dining to life.</p>
+                <ul id="tags" >
+                    <li id="tag1" class="border bg-gray-800 rounded-xl px-3 py-1">#html</li>
+                    <li id="tag2" class="border bg-gray-800 rounded-xl px-3 py-1">#css</li>
+                    <li id="tag4" class="border bg-gray-800 rounded-xl px-3 py-1">#gsap</li>
+                    <li id="tag5" class="border bg-gray-800 rounded-xl px-3 py-1">#tailwind CSS</li>
+                    <li id="tag5" class="border bg-gray-800 rounded-xl px-3 py-1">#javascript</li>
+                </ul>
+            </div>
+        </div>
+            <div id="project2" >
                 <a id="project_image_link" href="http://127.0.0.1:5501/CSS_PROJECT/project.html">
-                    <img id="project_image1" class="hover:scale-110 ease-in-out duration-300" src="imagesss/E-pathshala.png" alt="">
+                    <img id="project_image2" class="hover:scale-110 ease-in-out duration-300" src="imagesss/E-pathshala.png" alt="">
                 </a>
             <div id="project_description" >
                 <h2 id="project_title" >E-Pathshala</h2>
-                <p id="project_body" class="mt-4 object-cover">Our innovative platform offers an effortless and seamless approach to learning,<br> empowering students of all ages to a chieve brighter futures. Join us on a transformative <br> journey to simplify education and unlock your full potential </p>
+                <p id="project_body" class="mt-4 object-cover">Our innovative platform offers an effortless and seamless approach to learning,<br> empowering students of all ages to a chieve brighter futures. Join us on a transformative <br> journey to simplify education and unlock your full potential
+            </p>
                 <ul id="tags" >
                     <li id="tag1" class="border bg-gray-800 rounded-xl px-3 py-1">#html</li>
                     <li id="tag2" class="border bg-gray-800 rounded-xl px-3 py-1">#css</li>
@@ -78,9 +109,23 @@
                     <li id="tag5" class="border bg-gray-800 rounded-xl px-3 py-1">#tailwind CSS</li>
                 </ul>
             </div>
-
-        </div>     
+        </div> 
+        <div id="project2" >
+            <a id="project_image_link" href="https://github.com/ranavaibhav07/Ola-Data-Analyst-Project">
+                <img id="project_image2" class="hover:scale-110 ease-in-out duration-300" src="imagesss/ola.png" alt="">
+            </a>
+        <div id="project_description" >
+            <h2 id="project_title" >Ola Data Analyst Project</h2>
+            <p id="project_body" class="mt-4 object-cover">Ola Data Analyst Project Analyzed ride and user data to optimize operations and <br> enhance customer experience. Key tasks included data cleaning, trend analysis,<br> customer segmentation, and driver performance evaluation using SQL and Excel. <br> Built interactive dashboards with Power BI/Tableau to visualize insights. Achieved a <br> 12% improvement in ride efficiency by reducing wait times and optimizing route planning.
+        </p>
+            <ul id="tags" >
+                <li id="tag1" class="border bg-gray-800 rounded-xl px-3 py-1">#sql</li>
+                <li id="tag2" class="border bg-gray-800 rounded-xl px-3 py-1">#excel</li>
+                <li id="tag4" class="border bg-gray-800 rounded-xl px-3 py-1">#powerbi</li>
+            </ul>
+        </div>
     </div>
+    </div>    
     <div class="mt-32">
     <h1 id="contact_title" class="text-3xl relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#1788ae] border-[#1788ae] rounded-md">Contact Us</h1></div>
     <div id="contact_section" class="flex">
@@ -139,7 +184,7 @@
                     d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
                 ></path>
             </svg><p class="text-xl font-semibold ">Message</p></label>
-            <textarea class="text-black" name="Message" id="message" rows="4" cols="80" required></textarea></div>
+            <textarea class="text-white" name="Message" id="message" rows="4" cols="80" required></textarea></div>
             <button class="text-white text-xl font-semibold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] rounded-xl px-5 py-2 hover:scale-110 ease-in-out duration-300">Send Message</button>
         </form></div>
     </div>
@@ -148,5 +193,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
 <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+<!-- typed -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </body>
 </html>

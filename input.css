@@ -27,6 +27,37 @@
 #contact_icon{
     pointer-events: all;
 }
+.popup_about .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    /* background-color: grey; */
+    z-index: 1;
+}
+.popup_about .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup_about .overlay{
+    display: block;  
+}
+.popup_about.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
 #about_me{
     pointer-events: all;
 }
@@ -38,7 +69,11 @@
     padding: auto;
     
 }
-#project0, #project1{
+#project_section{
+    display: flex;
+    flex-direction: column;
+}
+#project0, #project1, #project2{
     display: flex;
     gap: 150px;
     flex-direction: row;
@@ -53,13 +88,21 @@
 }
 #project_image{
     height: 100%;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px;
 }
 #project_image1{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+#project_image2{
     height: 100%;
     width: 93%;
     display: flex;
@@ -105,7 +148,13 @@
     height: 100%;
     width: 50%;
    }
-
+#name, #email, #message{
+    background-color: rgb(66, 65, 65);
+    border-radius: 7px;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
    #contact_info{
     display: flex;
     flex-direction: column;
